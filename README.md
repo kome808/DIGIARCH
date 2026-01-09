@@ -2,6 +2,8 @@
 
 > 專業級數位典藏管理系統，採用 Vuexy 設計風格與現代化技術堆疊
 
+**🚀 線上展示**: [https://digiarch.vercel.app](https://digiarch.vercel.app/admin/dashboard)
+
 ## 🎯 專案簡介
 
 DIGIARCH 是一個全功能的數位典藏管理系統，提供完整的典藏品管理、徵集審議、全宗架構、數位化作業等功能。
