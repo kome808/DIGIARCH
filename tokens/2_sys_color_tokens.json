@@ -1,0 +1,950 @@
+{
+  "themeblue": {
+    "Sys": {
+      "Color": {
+        "Primary": {
+          "30": {
+            "value": "{Ref.Color.Primary.30}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "50": {
+            "value": "{Ref.Color.Primary.50}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "70": {
+            "value": "{Ref.Color.Primary.70}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Secondary": {
+          "40": {
+            "value": "{Ref.Color.Secondary.40}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "60": {
+            "value": "{Ref.Color.Secondary.60}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "80": {
+            "value": "{Ref.Color.Secondary.80}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "100": {
+            "value": "{Ref.Color.Secondary.100}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Gradients": {
+          "gradientsA": {
+            "value": "{Ref.Color.Gradients.gradientsA}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "gradientsB": {
+            "value": "{Ref.Color.Gradients.gradientsB}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "gradientsC": {
+            "value": "{Ref.Color.Gradients.gradientsC}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Neutral": {
+          "0": {
+            "value": "{Ref.Color.Neutral.0}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "10": {
+            "value": "{Ref.Color.Neutral.10}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "20": {
+            "value": "{Ref.Color.Neutral.20}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "30": {
+            "value": "{Ref.Color.Neutral.30}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "40": {
+            "value": "{Ref.Color.Neutral.40}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "60": {
+            "value": "{Ref.Color.Neutral.60}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "70": {
+            "value": "{Ref.Color.Neutral.70}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "80": {
+            "value": "{Ref.Color.Neutral.80}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "100": {
+            "value": "{Ref.Color.Neutral.100}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Opacity": {
+          "White 20%": {
+            "value": "#ffffff33",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "White 40%": {
+            "value": "#ffffff66",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "White 80%": {
+            "value": "#ffffffcc",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "Blue 20%": {
+            "value": "#0156a233",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "Blue 10%": {
+            "value": "#0156a21a",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "Black 30%": {
+            "value": "#1111114d",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Additional": {
+          "Normal": {
+            "lightness": {
+              "value": "{Ref.Color.Additional.Blue.70}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Additional.Blue.30}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          },
+          "Sucsess": {
+            "lightness": {
+              "value": "{Ref.Color.Additional.Green.70}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Additional.Green.30}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          },
+          "Warning": {
+            "lightness": {
+              "value": "{Ref.Color.Additional.Orange.70}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Additional.Orange.30}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          },
+          "Error": {
+            "lightness": {
+              "value": "{Ref.Color.Additional.Red.70}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Additional.Red.30}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          },
+          "Default": {
+            "lightness": {
+              "value": "{Ref.Color.Neutral.80}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Neutral.10}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          }
+        },
+        "Text": {
+          "lightness": {
+            "value": "{Ref.Color.Neutral.30}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "base": {
+            "value": "{Ref.Color.Neutral.10}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "darkness": {
+            "value": "{Ref.Color.Neutral.0}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Link": {
+          "aColor": {
+            "value": "{Ref.Color.Secondary.60}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "aHover": {
+            "value": "{Ref.Color.Primary.30}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        }
+      }
+    },
+    "Lable": {
+      "value": "序列",
+      "type": "fontFamily",
+      "prefix": "2_sys_color_tokens"
+    }
+  },
+  "themegreen": {
+    "Sys": {
+      "Color": {
+        "Primary": {
+          "30": {
+            "value": "#1f7848",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "50": {
+            "value": "#44aa55",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "70": {
+            "value": "#e5f7eb",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Secondary": {
+          "40": {
+            "value": "#1a864c",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "60": {
+            "value": "#33a59c",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "80": {
+            "value": "#86d9bc",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "100": {
+            "value": "#f2fbf6",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Gradients": {
+          "gradientsA": {
+            "value": "#1f7848",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "gradientsB": {
+            "value": "#33a59c",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "gradientsC": {
+            "value": "#86d9af",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Neutral": {
+          "0": {
+            "value": "{Ref.Color.Neutral.0}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "10": {
+            "value": "{Ref.Color.Neutral.10}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "20": {
+            "value": "{Ref.Color.Neutral.20}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "30": {
+            "value": "{Ref.Color.Neutral.30}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "40": {
+            "value": "{Ref.Color.Neutral.40}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "60": {
+            "value": "{Ref.Color.Neutral.60}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "70": {
+            "value": "{Ref.Color.Neutral.70}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "80": {
+            "value": "{Ref.Color.Neutral.80}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "100": {
+            "value": "{Ref.Color.Neutral.100}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Opacity": {
+          "White 20%": {
+            "value": "#ffffff33",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "White 40%": {
+            "value": "#ffffff66",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "White 80%": {
+            "value": "#ffffffcc",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "Blue 20%": {
+            "value": "#1a864c33",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "Blue 10%": {
+            "value": "#1a864c1a",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "Black 30%": {
+            "value": "#1111114d",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Additional": {
+          "Normal": {
+            "lightness": {
+              "value": "{Ref.Color.Additional.Blue.70}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Additional.Blue.30}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          },
+          "Sucsess": {
+            "lightness": {
+              "value": "{Ref.Color.Additional.Green.70}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Additional.Green.30}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          },
+          "Warning": {
+            "lightness": {
+              "value": "{Ref.Color.Additional.Orange.70}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Additional.Orange.30}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          },
+          "Error": {
+            "lightness": {
+              "value": "{Ref.Color.Additional.Red.70}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Additional.Red.30}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          },
+          "Default": {
+            "lightness": {
+              "value": "{Ref.Color.Neutral.80}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Neutral.10}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          }
+        },
+        "Text": {
+          "lightness": {
+            "value": "{Ref.Color.Neutral.30}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "base": {
+            "value": "{Ref.Color.Neutral.10}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "darkness": {
+            "value": "{Ref.Color.Neutral.0}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Link": {
+          "aColor": {
+            "value": "#49b77c",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "aHover": {
+            "value": "#1f7848",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        }
+      }
+    },
+    "Lable": {
+      "value": "序列",
+      "type": "fontFamily",
+      "prefix": "2_sys_color_tokens"
+    }
+  },
+  "themered": {
+    "Sys": {
+      "Color": {
+        "Primary": {
+          "30": {
+            "value": "#6c1e1e",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "50": {
+            "value": "#a23a3a",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "70": {
+            "value": "#f8eceb",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Secondary": {
+          "40": {
+            "value": "#6c1e1e",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "60": {
+            "value": "#cf4f4f",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "80": {
+            "value": "#d87d6d",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "100": {
+            "value": "#fdf6f5",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Gradients": {
+          "gradientsA": {
+            "value": "#6c1e1e",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "gradientsB": {
+            "value": "#cf4f4f",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "gradientsC": {
+            "value": "#d87d6d",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Neutral": {
+          "0": {
+            "value": "{Ref.Color.Neutral.0}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "10": {
+            "value": "{Ref.Color.Neutral.10}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "20": {
+            "value": "{Ref.Color.Neutral.20}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "30": {
+            "value": "{Ref.Color.Neutral.30}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "40": {
+            "value": "{Ref.Color.Neutral.40}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "60": {
+            "value": "{Ref.Color.Neutral.60}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "70": {
+            "value": "{Ref.Color.Neutral.70}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "80": {
+            "value": "{Ref.Color.Neutral.80}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "100": {
+            "value": "{Ref.Color.Neutral.100}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Opacity": {
+          "White 20%": {
+            "value": "#ffffff33",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "White 40%": {
+            "value": "#ffffff66",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "White 80%": {
+            "value": "#ffffffcc",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "Blue 20%": {
+            "value": "#0156a233",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "Blue 10%": {
+            "value": "#0156a21a",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "Black 30%": {
+            "value": "#1111114d",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Additional": {
+          "Normal": {
+            "lightness": {
+              "value": "{Ref.Color.Additional.Blue.70}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Additional.Blue.30}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          },
+          "Sucsess": {
+            "lightness": {
+              "value": "{Ref.Color.Additional.Green.70}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Additional.Green.30}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          },
+          "Warning": {
+            "lightness": {
+              "value": "{Ref.Color.Additional.Orange.70}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Additional.Orange.30}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          },
+          "Error": {
+            "lightness": {
+              "value": "{Ref.Color.Additional.Red.70}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Additional.Red.30}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          },
+          "Default": {
+            "lightness": {
+              "value": "{Ref.Color.Neutral.80}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Neutral.10}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          }
+        },
+        "Text": {
+          "lightness": {
+            "value": "{Ref.Color.Neutral.30}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "base": {
+            "value": "{Ref.Color.Neutral.10}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "darkness": {
+            "value": "{Ref.Color.Neutral.0}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Link": {
+          "aColor": {
+            "value": "#cf4f4f",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "aHover": {
+            "value": "#6c1e1e",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        }
+      }
+    },
+    "Lable": {
+      "value": "序列",
+      "type": "fontFamily",
+      "prefix": "2_sys_color_tokens"
+    }
+  },
+  "themepurper": {
+    "Sys": {
+      "Color": {
+        "Primary": {
+          "30": {
+            "value": "#8e0d70",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "50": {
+            "value": "#cf3eab",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "70": {
+            "value": "#f8ebf6",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Secondary": {
+          "40": {
+            "value": "#911a76",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "60": {
+            "value": "#ce3d86",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "80": {
+            "value": "#dd6081",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "100": {
+            "value": "#fff2fa",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Gradients": {
+          "gradientsA": {
+            "value": "#8e0d70",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "gradientsB": {
+            "value": "#ce3d86",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "gradientsC": {
+            "value": "#dd6081",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Neutral": {
+          "0": {
+            "value": "{Ref.Color.Neutral.0}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "10": {
+            "value": "{Ref.Color.Neutral.10}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "20": {
+            "value": "{Ref.Color.Neutral.20}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "30": {
+            "value": "{Ref.Color.Neutral.30}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "40": {
+            "value": "{Ref.Color.Neutral.40}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "60": {
+            "value": "{Ref.Color.Neutral.60}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "70": {
+            "value": "{Ref.Color.Neutral.70}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "80": {
+            "value": "{Ref.Color.Neutral.80}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "100": {
+            "value": "{Ref.Color.Neutral.100}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Opacity": {
+          "White 20%": {
+            "value": "#ffffff33",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "White 40%": {
+            "value": "#ffffff66",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "White 80%": {
+            "value": "#ffffffcc",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "Blue 20%": {
+            "value": "#0156a233",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "Blue 10%": {
+            "value": "#0156a21a",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "Black 30%": {
+            "value": "#1111114d",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Additional": {
+          "Normal": {
+            "lightness": {
+              "value": "{Ref.Color.Additional.Blue.70}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Additional.Blue.30}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          },
+          "Sucsess": {
+            "lightness": {
+              "value": "{Ref.Color.Additional.Green.70}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Additional.Green.30}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          },
+          "Warning": {
+            "lightness": {
+              "value": "{Ref.Color.Additional.Orange.70}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Additional.Orange.30}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          },
+          "Error": {
+            "lightness": {
+              "value": "{Ref.Color.Additional.Red.70}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Additional.Red.30}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          },
+          "Default": {
+            "lightness": {
+              "value": "{Ref.Color.Neutral.80}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            },
+            "darkness": {
+              "value": "{Ref.Color.Neutral.10}",
+              "type": "color",
+              "prefix": "2_sys_color_tokens"
+            }
+          }
+        },
+        "Text": {
+          "lightness": {
+            "value": "{Ref.Color.Neutral.30}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "base": {
+            "value": "{Ref.Color.Neutral.10}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "darkness": {
+            "value": "{Ref.Color.Neutral.0}",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        },
+        "Link": {
+          "aColor": {
+            "value": "#ce3d86",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          },
+          "aHover": {
+            "value": "#8e0d70",
+            "type": "color",
+            "prefix": "2_sys_color_tokens"
+          }
+        }
+      }
+    },
+    "Lable": {
+      "value": "序列",
+      "type": "fontFamily",
+      "prefix": "2_sys_color_tokens"
+    }
+  }
+}

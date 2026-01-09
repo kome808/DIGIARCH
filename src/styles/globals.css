@@ -1,0 +1,106 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+/* Vuexy-Inspired Design System */
+:root {
+  /* Vuexy Color System */
+  --color-primary: #7367F0;
+  --color-primary-light: #9E95F5;
+  --color-primary-dark: #5E50EE;
+  --color-primary-rgb: 115, 103, 240;
+
+  --color-bg-body: #F8F7FA;
+  --color-bg-card: #FFFFFF;
+  --color-bg-sidebar: #FFFFFF;
+
+  --color-text-primary: #5E5873;
+  --color-text-secondary: #B9B9C3;
+  --color-text-muted: #DCDCDC;
+
+  --color-border: #EBE9F1;
+  --color-border-light: #F3F2F7;
+
+  /* Shadows - Vuexy Style */
+  --shadow-sm: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
+  --shadow-md: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
+  --shadow-lg: 0 5px 25px rgba(34, 41, 47, 0.15);
+  --shadow-card: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
+
+  /* Typography - Vuexy Style */
+  --font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-base: 14px;
+  --font-size-sm: 12px;
+  --font-size-lg: 16px;
+  --line-height-base: 1.45;
+
+  /* Spacing - 4px Grid */
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar - Vuexy Style */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4D4D8;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A1A1AA;
+}
+
+/* Utility Classes */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.border-color {
+  border-color: var(--color-border);
+}
+
+/* Focus Ring - Vuexy Style */
+*:focus-visible {
+  outline: 2px solid rgba(var(--color-primary-rgb), 0.3);
+  outline-offset: 2px;
+}

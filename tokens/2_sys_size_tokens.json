@@ -1,0 +1,90 @@
+{
+  "sys": {
+    "Radius": {
+      "sm": {
+        "value": "{Ref.Size.4}",
+        "type": "number",
+        "prefix": "2_sys_size_tokens"
+      },
+      "def": {
+        "value": "{Ref.Size.8}",
+        "type": "number",
+        "prefix": "2_sys_size_tokens"
+      },
+      "med": {
+        "value": "{Ref.Size.12}",
+        "type": "number",
+        "prefix": "2_sys_size_tokens"
+      },
+      "lg": {
+        "value": "{Ref.Size.24}",
+        "type": "number",
+        "prefix": "2_sys_size_tokens"
+      },
+      "full": {
+        "value": "{ref.size.120}",
+        "type": "number",
+        "prefix": "2_sys_size_tokens"
+      }
+    },
+    "Line-height": {
+      "H_lg": {
+        "value": "{Ref.Size.48}",
+        "type": "number",
+        "prefix": "2_sys_size_tokens"
+      },
+      "H1": {
+        "value": "{Ref.Size.40}",
+        "type": "number",
+        "prefix": "2_sys_size_tokens"
+      },
+      "H2": {
+        "value": "{Ref.Size.32}",
+        "type": "number",
+        "prefix": "2_sys_size_tokens"
+      },
+      "H3": {
+        "value": "{Ref.Size.28}",
+        "type": "number",
+        "prefix": "2_sys_size_tokens"
+      },
+      "H4": {
+        "value": "{Ref.Size.24}",
+        "type": "number",
+        "prefix": "2_sys_size_tokens"
+      },
+      "fontsize 14": {
+        "value": "{Ref.Size.28}",
+        "type": "number",
+        "prefix": "2_sys_size_tokens"
+      },
+      "fontsize 16": {
+        "value": "{Ref.Size.32}",
+        "type": "number",
+        "prefix": "2_sys_size_tokens"
+      },
+      "fontsize 18": {
+        "value": "{Ref.Size.36}",
+        "type": "number",
+        "prefix": "2_sys_size_tokens"
+      }
+    },
+    "Letter-spacing": {
+      "def": {
+        "value": 0.6,
+        "type": "number",
+        "prefix": "2_sys_size_tokens"
+      },
+      "med": {
+        "value": 1.2,
+        "type": "number",
+        "prefix": "2_sys_size_tokens"
+      },
+      "large": {
+        "value": 1.8,
+        "type": "number",
+        "prefix": "2_sys_size_tokens"
+      }
+    }
+  }
+}
