@@ -1,7 +1,8 @@
 export interface SupabaseConfig {
   url: string;
   anonKey: string;
-  schemaName: string;
+  schemaName: string; // 用於展示和存儲
+  schema?: string;    // 用於程式內部邏輯
 }
 
 export interface SystemConfigRecord {
