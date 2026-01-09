@@ -37,14 +37,33 @@ ON CONFLICT (config_key) DO NOTHING;
 -- =====================================================
 ALTER TABLE digi.system_config ENABLE ROW LEVEL SECURITY;
 
--- 建立 RLS 政策：允許所有已認證用戶讀取
+-- =====================================================
+-- 5. 建立 RLS 政策
+-- =====================================================
+
+-- 政策 1: 允許 anon 角色讀取 (使用 Anon Key 時)
+CREATE POLICY "Allow anon users to read system_config"
+ON digi.system_config
+FOR SELECT
+TO anon
+USING (true);
+
+-- 政策 2: 允許 anon 角色寫入 (使用 Anon Key 時)
+CREATE POLICY "Allow anon users to write system_config"
+ON digi.system_config
+FOR ALL
+TO anon
+USING (true)
+WITH CHECK (true);
+
+-- 政策 3: 允許 authenticated 用戶讀取 (已登入用戶)
 CREATE POLICY "Allow authenticated users to read system_config"
 ON digi.system_config
 FOR SELECT
 TO authenticated
 USING (true);
 
--- 建立 RLS 政策：允許所有已認證用戶寫入
+-- 政策 4: 允許 authenticated 用戶寫入 (已登入用戶)
 CREATE POLICY "Allow authenticated users to write system_config"
 ON digi.system_config
 FOR ALL
@@ -53,7 +72,7 @@ USING (true)
 WITH CHECK (true);
 
 -- =====================================================
--- 5. 授予權限給 authenticated 與 anon 角色
+-- 6. 授予權限給 authenticated 與 anon 角色
 -- =====================================================
 GRANT USAGE ON SCHEMA digi TO anon, authenticated;
 GRANT ALL ON ALL TABLES IN SCHEMA digi TO anon, authenticated;
@@ -76,10 +95,17 @@ GRANT ALL ON FUNCTIONS TO anon, authenticated;
 -- 執行完畢後，您的 Supabase 專案將擁有：
 -- 1. digi Schema
 -- 2. system_config 資料表 (用於儲存系統設定)
--- 3. 完整的 RLS 政策與權限設定
+-- 3. 完整的 RLS 政策 (支援 anon 與 authenticated 角色)
+-- 4. 完整的權限設定
 --
 -- 接下來您可以在前端系統設定頁面輸入：
 -- - Supabase URL: https://your-project.supabase.co
 -- - Anon Key: (從 Supabase Dashboard 取得)
 -- - Schema Name: digi
+--
+-- ⚠️ 安全提醒：
+-- 目前的 RLS 政策允許所有人讀寫 system_config。
+-- 在生產環境中，建議根據實際需求調整政策，例如：
+-- - 限制只有特定用戶可以寫入
+-- - 加入更細緻的權限控制
 -- =====================================================
