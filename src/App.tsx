@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AdminLayout } from './layouts/AdminLayout';
 import { SupabaseConfigPage } from './pages/system-settings/SupabaseConfigPage';
+import CaseListPage from './pages/acquisition/CaseListPage';
 
 // Placeholder Pages
 const Dashboard = () => <h1 className="text-2xl font-bold">儀表板</h1>;
@@ -16,6 +17,11 @@ const App: React.FC = () => {
                     <Route index element={<Navigate to="dashboard" replace />} />
 
                     <Route path="dashboard" element={<Dashboard />} />
+
+                    {/* 徵集審議作業 module */}
+                    <Route path="acquisition">
+                        <Route path="cases" element={<CaseListPage />} />
+                    </Route>
 
                     {/* 系統設定 module */}
                     <Route path="system-settings">
