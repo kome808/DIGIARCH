@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>數位典藏系統 - 團隊協作指南</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS (CDN for standalone file) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vuexy-like Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7367F0',
+                        'primary-dark': '#5E50EE',
+                        secondary: '#A8AAAE',
+                        success: '#28C76F',
+                        danger: '#EA5455',
+                        warning: '#FF9F43',
+                        info: '#00CFE8',
+                        dark: '#4B4B4B',
+                        body: '#F8F7FA',
+                        card: '#FFFFFF',
+                        border: '#EBE9F1',
+                        'text-main': '#5E5873',
+                        'text-light': '#B9B9C3'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'card': '0 4px 24px 0 rgba(34, 41, 47, 0.1)',
+                        'hover': '0 8px 25px -5px rgba(34, 41, 47, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
+            background-color: #F8F7FA;
+            color: #5E5873;
+            font-size: 16px;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-body antialiased selection:bg-primary selection:text-white text-lg">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 glass-card shadow-sm border-b border-white/50">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold shadow-lg shadow-primary/30 text-xl">
+                        DA
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-2xl leading-none text-dark">協作指南</h1>
+                        <span class="text-xs font-bold text-primary tracking-wider uppercase">Collaboration Guide</span>
+                    </div>
+                </div>
+                <div class="text-sm font-medium text-text-light">Last Validated: 2026.01.09</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-12 space-y-16">
+
+        <!-- Hero Section -->
+        <div class="text-center space-y-6 mb-20">
+            <h2 class="text-4xl md:text-5xl font-bold text-dark leading-tight">高效能開發團隊標準</h2>
+            <p class="text-xl text-text-light max-w-3xl mx-auto">
+                本文件規範 DIGIARCH 專案的協作流程。透過 Antigravity AI 輔助與嚴謹的 Git/SQL 規範，實現無痛協作。
+            </p>
+        </div>
+
+        <!-- 1. AI Shortcuts (High Priority) -->
+        <section>
+            <div class="flex items-center gap-4 mb-8">
+                <div class="p-3 bg-primary/10 rounded-xl text-primary"><i data-lucide="bot" size="28"></i></div>
+                <h3 class="text-3xl font-bold text-dark">Antigravity 自動化指令</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Startup -->
+                <div
+                    class="bg-card rounded-2xl p-8 shadow-card hover:shadow-hover transition-all border border-transparent hover:border-primary/20 group">
+                    <div
+                        class="text-primary mb-6 bg-primary/5 w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i data-lucide="rocket" size="32"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-3">開始新任務</h4>
+                    <code
+                        class="block bg-dark text-white text-sm p-3 rounded-lg mb-4 text-center">/start-feature [名稱]</code>
+                    <p class="text-base text-text-light leading-relaxed">AI 自動同步最新代碼、建立獨立分支、並建立對應模組資料夾。</p>
+                </div>
+
+                <!-- Sync -->
+                <div
+                    class="bg-card rounded-2xl p-8 shadow-card hover:shadow-hover transition-all border border-transparent hover:border-warning/20 group">
+                    <div
+                        class="text-warning mb-6 bg-warning/5 w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i data-lucide="download" size="32"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-3">載入最新</h4>
+                    <code class="block bg-dark text-white text-sm p-3 rounded-lg mb-4 text-center">"載入最新程式"</code>
+                    <p class="text-base text-text-light leading-relaxed">相當於 `git pull`。每日開工前必做，確保與主線同步。</p>
+                </div>
+
+                <!-- Save -->
+                <div
+                    class="bg-card rounded-2xl p-8 shadow-card hover:shadow-hover transition-all border border-transparent hover:border-success/20 group">
+                    <div
+                        class="text-success mb-6 bg-success/5 w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i data-lucide="save" size="32"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-3">儲存進度</h4>
+                    <code class="block bg-dark text-white text-sm p-3 rounded-lg mb-4 text-center">"更新到 Git"</code>
+                    <p class="text-base text-text-light leading-relaxed">自動執行 Add, Commit, Push。不用記 Git 指令，隨時存檔。</p>
+                </div>
+
+                <!-- DB Sync -->
+                <div
+                    class="bg-card rounded-2xl p-8 shadow-card hover:shadow-hover transition-all border border-transparent hover:border-info/20 group">
+                    <div
+                        class="text-info mb-6 bg-info/5 w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i data-lucide="database" size="32"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-3">同步資料庫</h4>
+                    <code class="block bg-dark text-white text-sm p-3 rounded-lg mb-4 text-center">/sync-db</code>
+                    <p class="text-base text-text-light leading-relaxed">
+                        <span class="text-xs bg-danger/10 text-danger px-2 py-0.5 rounded mr-1 font-bold">Admin</span>
+                        主導者專用。自動掃描並執行所有設計師提出的 SQL 變更。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Workflow Diagram -->
+        <section>
+            <div class="flex items-center gap-4 mb-8">
+                <div class="p-3 bg-success/10 rounded-xl text-success"><i data-lucide="git-branch" size="28"></i></div>
+                <h3 class="text-3xl font-bold text-dark">標準協作開發流程 (SOP)</h3>
+            </div>
+
+            <div class="bg-card rounded-2xl shadow-card p-10 md:p-14 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-6 opacity-5">
+                    <i data-lucide="git-merge" size="250"></i>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative z-10">
+                    <!-- Step 1: Download -->
+                    <div class="text-center relative group">
+                        <div
+                            class="w-16 h-16 bg-white border-2 border-warning text-warning rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-lg group-hover:scale-110 transition-transform">
+                            1</div>
+                        <h4 class="font-bold text-xl mb-2 text-dark">下載更新</h4>
+                        <p class="text-base text-text-main font-medium">"載入最新程式"</p>
+                        <p class="text-sm text-text-light mt-2">確保基底是最新的</p>
+                    </div>
+
+                    <!-- Step 2: Start -->
+                    <div class="text-center relative group">
+                        <div class="hidden md:block absolute top-8 -left-1/2 w-full h-[3px] bg-border -z-10"></div>
+                        <div
+                            class="w-16 h-16 bg-white border-2 border-primary text-primary rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-lg group-hover:scale-110 transition-transform">
+                            2</div>
+                        <h4 class="font-bold text-xl mb-2 text-dark">開始新任務</h4>
+                        <p class="text-base text-text-main font-medium"><code>/start-feature</code></p>
+                        <p class="text-sm text-text-light mt-2">建立分支與資料夾</p>
+                    </div>
+
+                    <!-- Step 3: Dev -->
+                    <div class="text-center relative group">
+                        <div class="hidden md:block absolute top-8 -left-1/2 w-full h-[3px] bg-border -z-10"></div>
+                        <div
+                            class="w-16 h-16 bg-white border-2 border-info text-info rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-lg group-hover:scale-110 transition-transform">
+                            3</div>
+                        <h4 class="font-bold text-xl mb-2 text-dark">模組開發</h4>
+                        <p class="text-base text-text-main font-medium">Coding</p>
+                        <p class="text-sm text-text-light mt-2">依照規範實作功能</p>
+                    </div>
+
+                    <!-- Step 4: Upload -->
+                    <div class="text-center relative group">
+                        <div class="hidden md:block absolute top-8 -left-1/2 w-full h-[3px] bg-border -z-10"></div>
+                        <div
+                            class="w-16 h-16 bg-white border-2 border-success text-success rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-lg group-hover:scale-110 transition-transform">
+                            4</div>
+                        <h4 class="font-bold text-xl mb-2 text-dark">上傳 GitHub</h4>
+                        <p class="text-base text-text-main font-medium">"更新到 Git"</p>
+                        <p class="text-sm text-text-light mt-2">保存進度到遠端</p>
+                    </div>
+
+                    <!-- Step 5: Merge -->
+                    <div class="text-center relative group">
+                        <div class="hidden md:block absolute top-8 -left-1/2 w-full h-[3px] bg-border -z-10"></div>
+                        <div
+                            class="w-16 h-16 bg-success text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-lg ring-4 ring-success/20 group-hover:scale-110 transition-transform">
+                            5</div>
+                        <h4 class="font-bold text-xl mb-2 text-dark">合併更新</h4>
+                        <p class="text-base text-text-main font-medium">Pull Request</p>
+                        <p class="text-sm text-text-light mt-2">主導者審核合併</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <!-- 3. Roles -->
+            <section class="bg-card rounded-2xl shadow-card p-10 h-full">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="p-3 bg-info/10 rounded-xl text-info"><i data-lucide="users" size="28"></i></div>
+                    <h3 class="text-2xl font-bold text-dark">角色分工</h3>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex items-start gap-5 p-6 rounded-xl bg-body">
+                        <div class="mt-1"><i data-lucide="crown" class="text-warning" size="24"></i></div>
+                        <div>
+                            <h4 class="font-bold text-xl text-dark">專案主導者 (Lead)</h4>
+                            <p class="text-sm text-primary font-mono mb-3 font-semibold">@kome808</p>
+                            <ul class="text-base text-text-main list-disc list-inside space-y-2">
+                                <li>Supabase SQL 唯一執行者</li>
+                                <li>Merge Pull Requests</li>
+                                <li>Vercel 部署管理</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5 p-6 rounded-xl bg-body">
+                        <div class="mt-1"><i data-lucide="palette" class="text-info" size="24"></i></div>
+                        <div>
+                            <h4 class="font-bold text-xl text-dark">UX 設計師</h4>
+                            <ul class="text-base text-text-main list-disc list-inside space-y-2 mt-3">
+                                <li>功能模組 UI/UX 實作</li>
+                                <li>提出資料庫變更請求 (Migration Request)</li>
+                                <li>依照規範進行模組開發</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. SQL Workflow -->
+            <section class="bg-card rounded-2xl shadow-card p-10 h-full border border-danger/20">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="p-3 bg-danger/10 rounded-xl text-danger"><i data-lucide="database-zap" size="28"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark">資料庫變更 SOP</h3>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-6">
+                        <span
+                            class="w-10 h-10 rounded-full bg-body flex items-center justify-center font-bold text-lg text-text-light shadow-sm">1</span>
+                        <div class="flex-1 bg-body p-4 rounded-xl text-base">
+                            <strong class="block text-dark mb-1 text-lg">提出請求</strong>
+                            設計師請 AI 產生 SQL 至 <code>database/migrations/ready-to-apply/</code>
+                        </div>
+                    </div>
+                    <div class="flex justify-center"><i data-lucide="arrow-down" class="text-text-light/50"
+                            size="20"></i></div>
+                    <div class="flex items-center gap-6">
+                        <span
+                            class="w-10 h-10 rounded-full bg-body flex items-center justify-center font-bold text-lg text-text-light shadow-sm">2</span>
+                        <div class="flex-1 bg-body p-4 rounded-xl text-base">
+                            <strong class="block text-dark mb-1 text-lg">通知審核</strong>
+                            在 Pull Request 中備註「包含 SQL 變更」
+                        </div>
+                    </div>
+                    <div class="flex justify-center"><i data-lucide="arrow-down" class="text-text-light/50"
+                            size="20"></i></div>
+                    <div class="flex items-center gap-6">
+                        <span
+                            class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-bold text-lg text-primary shadow-sm border border-primary/20">3</span>
+                        <div class="flex-1 bg-primary/5 p-4 rounded-xl text-base border border-primary/20">
+                            <strong class="block text-primary mb-1 text-lg">執行同步 (Lead Only)</strong>
+                            主導者輸入 <code>/sync-db</code> 自動執行並歸檔
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 5. RWD & A11y Standards -->
+        <section class="bg-card rounded-2xl shadow-card p-10 relative overflow-hidden">
+            <!-- Background decoration -->
+            <div class="absolute -right-10 -top-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl z-0"></div>
+
+            <div class="flex items-center gap-4 mb-8 relative z-10">
+                <div class="p-3 bg-primary/10 rounded-xl text-primary"><i data-lucide="smartphone" size="28"></i></div>
+                <h3 class="text-3xl font-bold text-dark">RWD 與無障礙標準</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+                <!-- RWD -->
+                <div class="space-y-4">
+                    <h4 class="text-xl font-bold flex items-center gap-2"><i data-lucide="monitor-smartphone"
+                            class="text-info"></i> 響應式設計 (RWD)</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 bg-body p-4 rounded-xl">
+                            <i data-lucide="check-circle-2" class="text-success mt-0.5" size="20"></i>
+                            <div>
+                                <span class="font-bold block text-dark">Mobile First</span>
+                                <span class="text-sm text-text-light">所有功能必須支援手機版 (375px+) 操作，禁止橫向捲軸。</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 bg-body p-4 rounded-xl">
+                            <i data-lucide="mouse-pointer-click" class="text-success mt-0.5" size="20"></i>
+                            <div>
+                                <span class="font-bold block text-dark">Touch Friendly</span>
+                                <span class="text-sm text-text-light">按鈕點擊熱區至少 44x44px。</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- A11y -->
+                <div class="space-y-4">
+                    <h4 class="text-xl font-bold flex items-center gap-2"><i data-lucide="accessibility"
+                            class="text-danger"></i> 無障礙通用設計 (A11y)</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 bg-body p-4 rounded-xl">
+                            <i data-lucide="code-2" class="text-success mt-0.5" size="20"></i>
+                            <div>
+                                <span class="font-bold block text-dark">Semantic HTML</span>
+                                <span class="text-sm text-text-light">嚴格使用 <code>&lt;nav&gt;</code>,
+                                    <code>&lt;button&gt;</code> 等語意標籤。</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 bg-body p-4 rounded-xl">
+                            <i data-lucide="tag" class="text-success mt-0.5" size="20"></i>
+                            <div>
+                                <span class="font-bold block text-dark">ARIA Labels</span>
+                                <span class="text-sm text-text-light">圖示按鈕必須加上 <code>aria-label</code> 以支援螢幕閱讀器。</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Coding Standards -->
+        <section class="border-t border-border pt-16">
+            <h3 class="text-2xl font-bold text-dark mb-8">開發規範速查</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-card p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <h4 class="font-bold text-lg mb-4 flex items-center gap-3"><i data-lucide="folder-tree" size="24"
+                            class="text-secondary"></i> 目錄結構</h4>
+                    <ul class="text-base space-y-3 text-text-main font-mono bg-body p-4 rounded-xl">
+                        <li>src/pages/[模組]/</li>
+                        <li>src/services/[模組]/</li>
+                        <li>src/repositories/[模組]/</li>
+                    </ul>
+                </div>
+                <div class="bg-card p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <h4 class="font-bold text-lg mb-4 flex items-center gap-3"><i data-lucide="layout" size="24"
+                            class="text-primary"></i> Vuexy 風格</h4>
+                    <ul class="text-base space-y-3 text-text-main">
+                        <li><span
+                                class="inline-block w-4 h-4 bg-[#7367F0] rounded-full mr-3 align-middle"></span>Primary:
+                            #7367F0</li>
+                        <li><span
+                                class="inline-block w-4 h-4 bg-white border border-gray-200 rounded-full mr-3 align-middle"></span>Card:
+                            White + Shadow</li>
+                        <li><span class="inline-block w-4 h-4 bg-gray-500 rounded-full mr-3 align-middle"></span>Icons:
+                            Lucide React</li>
+                    </ul>
+                </div>
+                <div class="bg-card p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <h4 class="font-bold text-lg mb-4 flex items-center gap-3"><i data-lucide="check-square" size="24"
+                            class="text-success"></i> Definition of Done</h4>
+                    <ul class="text-base space-y-3 text-text-main">
+                        <li class="flex items-center gap-3"><i data-lucide="check" size="18" class="text-success"></i>
+                            UI 符合專業設計感</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" size="18" class="text-success"></i>
+                            RWD 手機版正常</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" size="18" class="text-success"></i>
+                            `npm run build` 無錯誤</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-text-light text-base py-10 border-t border-border">
+            <p>© 2026 凌網科技 UX 部門 - 數位典藏系統開發團隊</p>
+        </footer>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

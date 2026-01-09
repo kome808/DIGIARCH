@@ -2,17 +2,33 @@ import React from 'react';
 import { SidebarItem } from './SidebarItem';
 import { MENU_ITEMS } from '../../config/menu';
 
-export const Sidebar: React.FC = () => {
+interface Props {
+    isOpen?: boolean;
+    onClose?: () => void;
+}
+
+export const Sidebar: React.FC<Props> = ({ isOpen = false, onClose }) => {
     return (
-        <div
-            className="w-[260px] flex-shrink-0 h-full overflow-y-auto flex flex-col bg-white border-r border-[var(--color-border)] transition-all duration-300"
+        <aside
+            id="main-sidebar"
+            role="navigation"
+            aria-label="主選單"
+            aria-hidden={!isOpen} // For mobile contexts mainly, though on desktop it's always visible
+            className={`
+                fixed inset-y-0 left-0 z-30 
+                w-[260px] h-full flex flex-col 
+                bg-white border-r border-[var(--color-border)] 
+                transition-transform duration-300 ease-in-out
+                md:relative md:translate-x-0
+                ${isOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full'}
+            `}
             style={{
-                boxShadow: 'var(--shadow-sm)',
+                boxShadow: isOpen ? '0 0 15px rgba(0,0,0,0.1)' : undefined,
             }}
         >
             {/* Logo Section */}
-            <div className="px-6 py-5 border-b border-[var(--color-border-light)]">
-                <div className="flex items-center gap-3">
+            <div className="px-6 py-5 border-b border-[var(--color-border-light)] flex justify-between items-center">
+                <div role="heading" aria-level={1} className="flex items-center gap-3">
                     <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)] flex items-center justify-center text-white font-bold text-sm shadow-md">
                         DA
                     </div>
@@ -43,6 +59,6 @@ export const Sidebar: React.FC = () => {
                     <span className="opacity-60">2026</span>
                 </div>
             </div>
-        </div>
+        </aside>
     );
 };
