@@ -125,6 +125,11 @@ DIGIARCH/
 - Medium: 6px
 - Large: 8px
 
+## 👥 團隊開發與協作
+
+本專案採團隊協作模式，相關開發規範、Git 分支策略與 AI 指示規範請參閱：
+👉 **[團隊協同合作指南](docs/COLLABORATION_GUIDE.md)**
+
 ## 📝 開發規範
 
 請參閱 `docs/PROJECT_RULES.md` 與 `docs/dev-handbook-antigravity.md`。
