@@ -20,7 +20,7 @@ const App: React.FC = () => {
 
                     {/* 徵集審議作業 module */}
                     <Route path="acquisition">
-                        <Route path="cases" element={<CaseListPage />} />
+                        <Route path="list" element={<CaseListPage />} />
                     </Route>
 
                     {/* 系統設定 module */}
