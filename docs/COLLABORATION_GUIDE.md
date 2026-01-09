@@ -36,20 +36,35 @@
 
 ---
 
-## 🌿 Git 分支策略
+---
 
-為了維持系統穩定，我們採用 **Feature Branch** 流程：
+## 🌿 協作核心：一任務一分支 (簡單版)
 
-1.  **main**: 穩定版本。任何 push 會觸發 Vercel 生產環境更新。**禁止直接在 main 進行實驗性修改。**
-2.  **feature/xxx**: 功能分支（例如 `feature/collection-module`）。設計師在分支上作業。
+為了不讓大家卡住，我們採用最直覺的「解任務」方式：
 
-### 工作流範例：
-1.  設計師從 `main` 拉出新分支：`git checkout -b feature/module-name`
-2.  在 Antigravity 中開發模組。
-3.  提交變更：`git commit -m "feat: 完成徵集案件列表頁面"`
-4.  推送到 GitHub：`git push origin feature/module-name`
-5.  在 GitHub 建立 **Pull Request (PR)** 給主導者。
-6.  主導者完成 Review 後合併至 `main`。
+1.  **接下任務**：對 AI 說「**我要開發 XXX 模組，請幫我建立新分支**」。
+2.  **埋頭開發**：在這個分支（這條路上）盡情開發，AI 會幫你把 Code 都放在正確位置。
+3.  **大功告成**：對 AI 說「**更新到 Git**」。
+4.  **請求合併**：在 GitHub 網站上點選 **Pull Request**，交由主導者合併回主線 (`main`)。
+
+> [!IMPORTANT]
+> **重要規則**：
+> - 每天開始先說：「**載入最新程式**」。
+> - 不同模組絕對不在同一個分支開發，這樣才不會互相干擾！
+
+---
+
+## 📦 模組化開發：代碼隔離規範
+
+為了確保模組之間互不影響，請嚴格遵守以下目錄結構：
+
+*   **頁面程式**：`src/pages/[模組名稱]/...`
+*   **資料邏輯**：`src/services/[模組名稱]Service.ts`
+*   **資料存取**：`src/repositories/[模組名稱]Repository.ts`
+
+> [!TIP]
+> **給設計師的建議**：
+> 當你請 AI 建立新檔案時，可以要求它：「**請把這模組的所有檔案都放在專屬的資料夾內，不要動到其他模組。**」
 
 ---
 
